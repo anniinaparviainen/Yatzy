@@ -53,10 +53,19 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Noppa.cs" />
+    <Compile Include="NoppaPictures.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoppaPictures.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoppaPictures.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NoppaPictures.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +88,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
