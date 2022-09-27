@@ -68,14 +68,21 @@ namespace Noppapeli
                 Point(13 + count * spacing, 13);
         }
 
-        // Käy läpi Nopat-listan ja summaa kaikki ykköset
+        
         private void buttonOnes_Click(object sender, EventArgs e)
         {
+            // Käy läpi Nopat-listan ja summaa kaikki ykköset
+
             // lista
-            // elementti - indeksi => int i = 0 => listan loppuun
-            // elementti - indeksi
-            // elementti - indeksi
-            // elementti - indeksi
+            // elementti - 0 indeksi => i muuttuja käy läpi kaikki indeksit silmukassa
+            // elementti - 1 indeksi
+            // elementti - 2 indeksi
+            // elementti - 3 indeksi
+            // elementti - 3 indeksi
+
+            // Muistakaa listassa on Noppa luokan objektejä
+            // Jokaisella objektilla on tallessa property osiossa oma luku
+            // esim: nopat[i].Luku
 
             // muuttuja, johon tulee summa talteet, oletuksena = 0
             // käydään läpi lista, eli tarvitaan silmukka
@@ -83,6 +90,15 @@ namespace Noppapeli
             //       indeksi vaihtuu joka kierros, eli tarkistetaan
             //      eri elementtiä<
             // jos totta, lisätään nopan luku summaan
+
+            int summa = 0;
+
+            for (int i = 0; i < Nopat.Count; i++)
+            {
+                summa += Nopat[i].Luku;
+            }
+
+            buttonOnes.Text = summa.ToString();
         }
 
         private void buttonPair_Click(object sender, EventArgs e)
