@@ -243,6 +243,7 @@ namespace Noppapeli
             this.buttonOnes.Size = new System.Drawing.Size(59, 32);
             this.buttonOnes.TabIndex = 17;
             this.buttonOnes.UseVisualStyleBackColor = true;
+            this.buttonOnes.Click += new System.EventHandler(this.buttonOnes_Click);
             // 
             // buttonTwos
             // 
@@ -342,6 +343,7 @@ namespace Noppapeli
             this.buttonPair.Size = new System.Drawing.Size(59, 32);
             this.buttonPair.TabIndex = 23;
             this.buttonPair.UseVisualStyleBackColor = true;
+            this.buttonPair.Click += new System.EventHandler(this.buttonPair_Click);
             // 
             // buttonYatzy
             // 
@@ -372,6 +374,7 @@ namespace Noppapeli
             // 
             // buttonSum
             // 
+            this.buttonSum.Enabled = false;
             this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSum.Location = new System.Drawing.Point(608, 314);
             this.buttonSum.Name = "buttonSum";

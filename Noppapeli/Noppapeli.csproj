@@ -90,24 +90,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\N6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\N1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\N2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\N3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\N4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\N5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\N4.png" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\N3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\N6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

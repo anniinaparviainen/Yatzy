@@ -64,8 +64,54 @@ namespace Noppapeli
 
             string key = jokuNoppa.GetNoppaKey();
             jokuNoppa.Boxi.Image = Noppa.GetPictureResX(key);
-            jokuNoppa.Boxi.Location = new 
+            jokuNoppa.Boxi.Location = new
                 Point(13 + count * spacing, 13);
+        }
+
+        // Käy läpi Nopat-listan ja summaa kaikki ykköset
+        private void buttonOnes_Click(object sender, EventArgs e)
+        {
+            // lista
+            // elementti - indeksi => int i = 0 => listan loppuun
+            // elementti - indeksi
+            // elementti - indeksi
+            // elementti - indeksi
+
+            // muuttuja, johon tulee summa talteet, oletuksena = 0
+            // käydään läpi lista, eli tarvitaan silmukka
+            // tarkistetaan onko nopan luku yksi, if-else
+            //       indeksi vaihtuu joka kierros, eli tarkistetaan
+            //      eri elementtiä<
+            // jos totta, lisätään nopan luku summaan
+        }
+
+        private void buttonPair_Click(object sender, EventArgs e)
+        {
+           // { 0, 2, 0, 1, 3, 0 }
+            int[] pairs = new int[6]; // count how many of each dice value is found
+            // { 0, 4, 0, 0, 10, 0 }
+            int[] pairValues = new int[6];
+            const int multiplier = 2; // number of dices found, is only multiplied by 2, since you get points for the pair
+            // 0 - 5
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                // linQ kirjaston metodeja
+                pairs[i] = Nopat.Where(test => 
+                    test.Luku == i + 1).Count();
+            }
+
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                if (pairs[i] > 1) // lasketaan vain parit + yli
+                {
+                    // tarkistetaan, että löytyi 2 paria
+                    pairValues[i] = (i + 1) * multiplier;
+                }
+            }
+            // {0, 4, 0, 8, 0, 0}
+            buttonPair.Text = pairValues.Max().ToString();
+
+            // päivitetään summa napin teksti
         }
     }
 }
