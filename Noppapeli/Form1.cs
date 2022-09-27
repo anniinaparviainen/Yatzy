@@ -95,7 +95,10 @@ namespace Noppapeli
 
             for (int i = 0; i < Nopat.Count; i++)
             {
-                summa += Nopat[i].Luku;
+                if (Nopat[i].Luku == 1)
+                {
+                    summa += Nopat[i].Luku;
+                }
             }
 
             buttonOnes.Text = summa.ToString();
