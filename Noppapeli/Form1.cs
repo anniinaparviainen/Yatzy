@@ -68,7 +68,7 @@ namespace Noppapeli
                 Point(13 + count * spacing, 13);
         }
 
-        
+
         private void buttonOnes_Click(object sender, EventArgs e)
         {
             // Käy läpi Nopat-listan ja summaa kaikki ykköset
@@ -78,7 +78,7 @@ namespace Noppapeli
             // elementti - 1 indeksi
             // elementti - 2 indeksi
             // elementti - 3 indeksi
-            // elementti - 3 indeksi
+            // elementti - 4 indeksi
 
             // Muistakaa listassa on Noppa luokan objektejä
             // Jokaisella objektilla on tallessa property osiossa oma luku
@@ -95,7 +95,7 @@ namespace Noppapeli
 
             for (int i = 0; i < Nopat.Count; i++)
             {
-                if (Nopat[i].Luku == 1)
+                if (Nopat[i].Luku == 1) // kovakoodattu, mitä silmälukua haetaan
                 {
                     summa += Nopat[i].Luku;
                 }
@@ -106,17 +106,165 @@ namespace Noppapeli
 
         private void buttonPair_Click(object sender, EventArgs e)
         {
-           // { 0, 2, 0, 1, 3, 0 }
+            // { 1, 0, 2, 2, 0, 0 }
             int[] pairs = new int[6]; // count how many of each dice value is found
-            // { 0, 4, 0, 0, 10, 0 }
+            // { 0, 0, 6, 8, 0, 0 }
             int[] pairValues = new int[6];
             const int multiplier = 2; // number of dices found, is only multiplied by 2, since you get points for the pair
             // 0 - 5
             for (int i = 0; i < pairs.Length; i++)
             {
                 // linQ kirjaston metodeja
-                pairs[i] = Nopat.Where(test => 
+                pairs[i] = Nopat.Where(noppa =>
+                    noppa.Luku == i + 1).Count();
+            }
+
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                if (pairs[i] > 1) // lasketaan vain parit + yli
+                {
+                    // tarkistetaan, että löytyi 2 paria
+                    pairValues[i] = (i + 1) * multiplier;
+                }
+            }
+            // {0, 4, 0, 8, 0, 0}
+            buttonPair.Text = pairValues.Max().ToString();
+
+            // päivitetään summa napin teksti
+        }
+
+
+        private void buttonTwos_Click(object sender, EventArgs e)
+        {
+            int summa = 0;
+
+            for (int i = 0; i < Nopat.Count; i++)
+            {
+                if (Nopat[i].Luku == 2)
+                {
+                    summa += Nopat[i].Luku;
+                }
+
+                buttonTwos.Text = summa.ToString();
+            }
+        }
+
+        private void buttonThrees_Click(object sender, EventArgs e)
+        {
+            int summa = 0;
+
+            for (int i = 0; i < Nopat.Count; i++)
+            {
+                if (Nopat[i].Luku == 3)
+                {
+                    summa += Nopat[i].Luku;
+                }
+
+                buttonThrees.Text = summa.ToString();
+            }
+        }
+
+        private void buttonFours_Click(object sender, EventArgs e)
+        {
+            int summa = 0;
+
+            for (int i = 0; i < Nopat.Count; i++)
+            {
+                if (Nopat[i].Luku == 4)
+                {
+                    summa += Nopat[i].Luku;
+                }
+
+                buttonFours.Text = summa.ToString();
+            }
+        }
+
+        private void buttonFives_Click(object sender, EventArgs e)
+        {
+            int summa = 0;
+
+            for (int i = 0; i < Nopat.Count; i++)
+            {
+                if (Nopat[i].Luku == 5)
+                {
+                    summa += Nopat[i].Luku;
+                }
+
+                buttonFives.Text = summa.ToString();
+            }
+        }
+
+        private void buttonSixes_Click(object sender, EventArgs e)
+        {
+            int summa = 0;
+
+            for (int i = 0; i < Nopat.Count; i++)
+            {
+                if (Nopat[i].Luku == 6)
+                {
+                    summa += Nopat[i].Luku;
+                }
+
+                buttonSixes.Text = summa.ToString();
+            }
+        }
+
+        private void buttonTwoPairs_Click(object sender, EventArgs e)
+        {
+            // 3 muutosta
+
+            // { 0, 2, 0, 1, 3, 0 }
+            int[] pairs = new int[6]; // count how many of each dice value is found
+            // { 0, 4, 0, 0, 10, 0 }
+            int[] pairValues = new int[6];
+            const int multiplier = 2; // number of dices found, is only multiplied by 2, since you get points for the pair
+            int pareja = 0; // tähän otetaan talteen, montako paria on löytynyt
+            // 0 - 5
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                // linQ kirjaston metodeja
+                pairs[i] = Nopat.Where(test =>
                     test.Luku == i + 1).Count();
+            }
+
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                if (pairs[i] > 1) // lasketaan vain parit + yli
+                {
+                    // kirjataan, että pari on löytynyt
+                    pareja++;
+
+
+                    pairValues[i] = (i + 1) * multiplier;
+                }
+            }
+
+
+            if (pareja == 2)
+            {
+
+                buttonPair.Text = pairValues.Sum().ToString();
+            }
+            else
+            {
+                buttonPair.Text = "0";
+            }
+            // {0, 4, 0, 8, 0, 0}
+        }
+
+        private void button3OfKind_Click(object sender, EventArgs e)
+        {
+            // { 1, 0, 2, 2, 0, 0 }
+            int[] pairs = new int[6]; // count how many of each dice value is found
+            // { 0, 0, 6, 8, 0, 0 }
+            int[] pairValues = new int[6];
+            const int multiplier = 2; // number of dices found, is only multiplied by 2, since you get points for the pair
+            // 0 - 5
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                // linQ kirjaston metodeja
+                pairs[i] = Nopat.Where(noppa =>
+                    noppa.Luku == i + 1).Count();
             }
 
             for (int i = 0; i < pairs.Length; i++)

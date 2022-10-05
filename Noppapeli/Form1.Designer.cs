@@ -253,6 +253,7 @@ namespace Noppapeli
             this.buttonTwos.Size = new System.Drawing.Size(59, 32);
             this.buttonTwos.TabIndex = 18;
             this.buttonTwos.UseVisualStyleBackColor = true;
+            this.buttonTwos.Click += new System.EventHandler(this.buttonTwos_Click);
             // 
             // buttonFours
             // 
@@ -262,6 +263,7 @@ namespace Noppapeli
             this.buttonFours.Size = new System.Drawing.Size(59, 32);
             this.buttonFours.TabIndex = 20;
             this.buttonFours.UseVisualStyleBackColor = true;
+            this.buttonFours.Click += new System.EventHandler(this.buttonFours_Click);
             // 
             // buttonThrees
             // 
@@ -271,6 +273,7 @@ namespace Noppapeli
             this.buttonThrees.Size = new System.Drawing.Size(59, 32);
             this.buttonThrees.TabIndex = 19;
             this.buttonThrees.UseVisualStyleBackColor = true;
+            this.buttonThrees.Click += new System.EventHandler(this.buttonThrees_Click);
             // 
             // buttonSixes
             // 
@@ -280,6 +283,7 @@ namespace Noppapeli
             this.buttonSixes.Size = new System.Drawing.Size(59, 32);
             this.buttonSixes.TabIndex = 22;
             this.buttonSixes.UseVisualStyleBackColor = true;
+            this.buttonSixes.Click += new System.EventHandler(this.buttonSixes_Click);
             // 
             // buttonFives
             // 
@@ -289,6 +293,7 @@ namespace Noppapeli
             this.buttonFives.Size = new System.Drawing.Size(59, 32);
             this.buttonFives.TabIndex = 21;
             this.buttonFives.UseVisualStyleBackColor = true;
+            this.buttonFives.Click += new System.EventHandler(this.buttonFives_Click);
             // 
             // buttonLargeStraight
             // 
@@ -325,6 +330,7 @@ namespace Noppapeli
             this.button3OfKind.Size = new System.Drawing.Size(59, 32);
             this.button3OfKind.TabIndex = 25;
             this.button3OfKind.UseVisualStyleBackColor = true;
+            this.button3OfKind.Click += new System.EventHandler(this.button3OfKind_Click);
             // 
             // buttonTwoPairs
             // 
@@ -334,6 +340,7 @@ namespace Noppapeli
             this.buttonTwoPairs.Size = new System.Drawing.Size(59, 32);
             this.buttonTwoPairs.TabIndex = 24;
             this.buttonTwoPairs.UseVisualStyleBackColor = true;
+            this.buttonTwoPairs.Click += new System.EventHandler(this.buttonTwoPairs_Click);
             // 
             // buttonPair
             // 
