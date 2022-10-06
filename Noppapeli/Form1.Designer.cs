@@ -303,6 +303,7 @@ namespace Noppapeli
             this.buttonLargeStraight.Size = new System.Drawing.Size(59, 32);
             this.buttonLargeStraight.TabIndex = 28;
             this.buttonLargeStraight.UseVisualStyleBackColor = true;
+            this.buttonLargeStraight.Click += new System.EventHandler(this.buttonLargeStraight_Click);
             // 
             // buttonSmallStraight
             // 
@@ -312,6 +313,7 @@ namespace Noppapeli
             this.buttonSmallStraight.Size = new System.Drawing.Size(59, 32);
             this.buttonSmallStraight.TabIndex = 27;
             this.buttonSmallStraight.UseVisualStyleBackColor = true;
+            this.buttonSmallStraight.Click += new System.EventHandler(this.buttonSmallStraight_Click);
             // 
             // button4OfKind
             // 
@@ -321,6 +323,7 @@ namespace Noppapeli
             this.button4OfKind.Size = new System.Drawing.Size(59, 32);
             this.button4OfKind.TabIndex = 26;
             this.button4OfKind.UseVisualStyleBackColor = true;
+            this.button4OfKind.Click += new System.EventHandler(this.button4OfKind_Click);
             // 
             // button3OfKind
             // 
@@ -360,6 +363,7 @@ namespace Noppapeli
             this.buttonYatzy.Size = new System.Drawing.Size(59, 32);
             this.buttonYatzy.TabIndex = 31;
             this.buttonYatzy.UseVisualStyleBackColor = true;
+            this.buttonYatzy.Click += new System.EventHandler(this.buttonYatzy_Click);
             // 
             // buttonChance
             // 
@@ -369,6 +373,7 @@ namespace Noppapeli
             this.buttonChance.Size = new System.Drawing.Size(59, 32);
             this.buttonChance.TabIndex = 30;
             this.buttonChance.UseVisualStyleBackColor = true;
+            this.buttonChance.Click += new System.EventHandler(this.buttonChance_Click);
             // 
             // buttonFullHouse
             // 
@@ -378,6 +383,7 @@ namespace Noppapeli
             this.buttonFullHouse.Size = new System.Drawing.Size(59, 32);
             this.buttonFullHouse.TabIndex = 29;
             this.buttonFullHouse.UseVisualStyleBackColor = true;
+            this.buttonFullHouse.Click += new System.EventHandler(this.buttonFullHouse_Click);
             // 
             // buttonSum
             // 
